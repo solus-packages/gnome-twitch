@@ -1,0 +1,42 @@
+name       : gnome-twitch
+version    : 0.3.0
+release    : 1
+source     :
+    - https://github.com/vinszent/gnome-twitch/archive/v0.3.0.tar.gz : 92d7371ba5dc37dcb81dedeea447d5cfb5a6e74522a5585a34ddbab4666aa1c5
+license    : GPL-3.0
+component  : games
+summary    : GNOME Twitch app for watching Twitch on your GNU/Linux desktop.
+description: |
+    GNOME Twitch app for watching Twitch on your GNU/Linux desktop.
+builddeps  :
+    - pkgconfig(clutter-gst-3.0)
+    - pkgconfig(clutter-gtk-1.0)
+    - pkgconfig(gstreamer-1.0)
+    - pkgconfig(gstreamer-plugins-bad-1.0)
+    - pkgconfig(gstreamer-plugins-base-1.0)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(json-glib-1.0)
+    - pkgconfig(libpeas-1.0)
+    - pkgconfig(libsoup-2.4)
+    - pkgconfig(mpv)
+    - pkgconfig(webkit2gtk-4.0)
+    - meson
+    - ninja
+setup      : |
+    mkdir build
+    %patch -p1 < $pkgfiles/0001-meson.build-Fix-typo.patch
+    cd build
+    meson.py --prefix /usr --libdir lib64 \
+             --buildtype release \
+             -Dwith-player-gstreamer-clutter=true \
+             -Dwith-player-gstreamer-cairo=true \
+             -Dwith-player-gstreamer-opengl=true \
+             -Dwith-player-mpv-opengl=true \
+             -Db_lundef=false \
+             -Ddo-post-install=false ..
+build      : |
+    cd build
+    ninja
+install    : |
+    cd build
+    DESTDIR=%installroot% ninja install
