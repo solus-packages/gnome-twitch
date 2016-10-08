@@ -1,6 +1,6 @@
 name       : gnome-twitch
 version    : 0.3.0
-release    : 2
+release    : 3
 source     :
     - https://github.com/vinszent/gnome-twitch/archive/v0.3.0.tar.gz : 92d7371ba5dc37dcb81dedeea447d5cfb5a6e74522a5585a34ddbab4666aa1c5
 license    : GPL-3.0
@@ -25,6 +25,7 @@ builddeps  :
 setup      : |
     mkdir build
     %patch -p1 < $pkgfiles/0001-meson.build-Fix-typo.patch
+    %patch -p1 < $pkgfiles/0002-append-id-fix.patch
     cd build
     meson.py --prefix /usr --libdir lib64 \
              --buildtype release \
