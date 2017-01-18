@@ -1,6 +1,6 @@
 name       : gnome-twitch
 version    : 0.3.0
-release    : 3
+release    : 4
 source     :
     - https://github.com/vinszent/gnome-twitch/archive/v0.3.0.tar.gz : 92d7371ba5dc37dcb81dedeea447d5cfb5a6e74522a5585a34ddbab4666aa1c5
 license    : GPL-3.0
