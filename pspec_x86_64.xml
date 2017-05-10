@@ -2,8 +2,8 @@
     <Source>
         <Name>gnome-twitch</Name>
         <Packager>
-            <Name>Peter O&apos;Connor</Name>
-            <Email>peter@solus-project.com</Email>
+            <Name>Federico Damián Schonborn</Name>
+            <Email>federicodamiansch@gmail.com</Email>
         </Packager>
         <License>GPL-3.0</License>
         <PartOf>multimedia.video</PartOf>
@@ -49,19 +49,19 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="7">gnome-twitch</Dependency>
+            <Dependency release="8">gnome-twitch</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/</Path>
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2017-04-10</Date>
-            <Version>0.4.0</Version>
+        <Update release="8">
+            <Date>2017-05-10</Date>
+            <Version>0.4.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Peter O&apos;Connor</Name>
-            <Email>peter@solus-project.com</Email>
+            <Name>Federico Damián Schonborn</Name>
+            <Email>federicodamiansch@gmail.com</Email>
         </Update>
     </History>
 </PISI>
