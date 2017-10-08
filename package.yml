@@ -1,6 +1,6 @@
 name       : gnome-twitch
 version    : 0.4.1
-release    : 8
+release    : 9
 source     :
     - https://github.com/vinszent/gnome-twitch/archive/v0.4.1.tar.gz : a0e2b13bdd9c2ca572bf70da9b440e886aedf4d1588073dc1338743e8b6eacef
 license    : GPL-3.0

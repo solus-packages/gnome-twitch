@@ -2,8 +2,8 @@
     <Source>
         <Name>gnome-twitch</Name>
         <Packager>
-            <Name>Federico Damián Schonborn</Name>
-            <Email>federicodamiansch@gmail.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Packager>
         <License>GPL-3.0</License>
         <PartOf>multimedia.video</PartOf>
@@ -49,19 +49,19 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="8">gnome-twitch</Dependency>
+            <Dependency release="9">gnome-twitch</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/</Path>
         </Files>
     </Package>
     <History>
-        <Update release="8">
-            <Date>2017-05-10</Date>
+        <Update release="9">
+            <Date>2017-10-08</Date>
             <Version>0.4.1</Version>
             <Comment>Packaging update</Comment>
-            <Name>Federico Damián Schonborn</Name>
-            <Email>federicodamiansch@gmail.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Update>
     </History>
 </PISI>
