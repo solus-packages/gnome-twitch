@@ -1,6 +1,6 @@
 name       : gnome-twitch
 version    : 0.4.1
-release    : 9
+release    : 10
 source     :
     - https://github.com/vinszent/gnome-twitch/archive/v0.4.1.tar.gz : a0e2b13bdd9c2ca572bf70da9b440e886aedf4d1588073dc1338743e8b6eacef
 license    : GPL-3.0
@@ -11,30 +11,24 @@ description: |
 builddeps  :
     - pkgconfig(clutter-gst-3.0)
     - pkgconfig(clutter-gtk-1.0)
-    - pkgconfig(gstreamer-1.0)
     - pkgconfig(gstreamer-plugins-bad-1.0)
-    - pkgconfig(gstreamer-plugins-base-1.0)
-    - pkgconfig(gtk+-3.0)
     - pkgconfig(json-glib-1.0)
     - pkgconfig(libpeas-1.0)
     - pkgconfig(libsoup-2.4)
     - pkgconfig(mpv)
     - pkgconfig(webkit2gtk-4.0)
-    - meson
-    - ninja
 setup      : |
+    %patch -p1 < $pkgfiles/0001-Fix-typo-in-Meson-build-options.patch
+
     export LANG=en_US.utf8
-    export LC_ALL=en_US.utf8
-    %meson_configure --prefix /usr --libdir lib64 \
-             --buildtype release \
+    %meson_configure --buildtype release \
              -Dbuild-player-backends=gstreamer-cairo,gstreamer-opengl,gstreamer-clutter,mpv-opengl \
              -Db_lundef=false \
              -Ddo-post-install=false
 build      : |
     export LANG=en_US.utf8
-    export LC_ALL=en_US.utf8
     %meson_build
 install    : |
     export LANG=en_US.utf8
-    export LC_ALL=en_US.utf8
     %meson_install
+
