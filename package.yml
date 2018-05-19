@@ -1,8 +1,8 @@
 name       : gnome-twitch
-version    : 0.4.1
-release    : 13
+version    : 0.4.2
+release    : 14
 source     :
-    - https://github.com/vinszent/gnome-twitch/archive/v0.4.1.tar.gz : a0e2b13bdd9c2ca572bf70da9b440e886aedf4d1588073dc1338743e8b6eacef
+    - https://github.com/vinszent/gnome-twitch/archive/v0.4.2.tar.gz : 82c37c858f69c39b7cd38d20c91d8ec2441d339a6d2eaf1f1cc9f0503c52b661
 license    : GPL-3.0-or-later
 component  : multimedia.video
 summary    : GNOME Twitch app for watching Twitch on your GNU/Linux desktop.
@@ -18,9 +18,6 @@ builddeps  :
     - pkgconfig(mpv)
     - pkgconfig(webkit2gtk-4.0)
 setup      : |
-    %patch -p1 < $pkgfiles/0001-Fix-typo-in-Meson-build-options.patch
-    %patch -p1 < $pkgfiles/0002-https-fix.patch
-
     export LANG=en_US.utf8
     %meson_configure --buildtype release \
              -Dbuild-player-backends=gstreamer-cairo,gstreamer-opengl,gstreamer-clutter,mpv-opengl \
