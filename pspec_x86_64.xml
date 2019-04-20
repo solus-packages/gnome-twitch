@@ -2,15 +2,15 @@
     <Source>
         <Name>gnome-twitch</Name>
         <Packager>
-            <Name>Simon Friend</Name>
-            <Email>simbiotiqu@gmail.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Packager>
         <License>GPL-3.0-or-later</License>
         <PartOf>multimedia.video</PartOf>
         <Summary xml:lang="en">GNOME Twitch app for watching Twitch on your GNU/Linux desktop.</Summary>
         <Description xml:lang="en">GNOME Twitch app for watching Twitch on your GNU/Linux desktop.
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
     </Source>
     <Package>
         <Name>gnome-twitch</Name>
@@ -19,7 +19,7 @@
 </Description>
         <PartOf>multimedia.video</PartOf>
         <Files>
-            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/bin/gnome-twitch</Path>
             <Path fileType="library">/usr/lib64/gnome-twitch/player-backends/libplayer-backend-gstreamer-cairo.so</Path>
             <Path fileType="library">/usr/lib64/gnome-twitch/player-backends/libplayer-backend-gstreamer-clutter.so</Path>
             <Path fileType="library">/usr/lib64/gnome-twitch/player-backends/libplayer-backend-gstreamer-opengl.so</Path>
@@ -39,7 +39,17 @@
             <Path fileType="data">/usr/share/icons/hicolor/512x512/apps/com.vinszent.GnomeTwitch.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/com.vinszent.GnomeTwitch.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/symbolic/apps/com.vinszent.GnomeTwitch-symbolic.svg</Path>
-            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="localedata">/usr/share/locale/cs/LC_MESSAGES/gnome-twitch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/de/LC_MESSAGES/gnome-twitch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/es/LC_MESSAGES/gnome-twitch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/fr/LC_MESSAGES/gnome-twitch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/hu/LC_MESSAGES/gnome-twitch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/nl/LC_MESSAGES/gnome-twitch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pl/LC_MESSAGES/gnome-twitch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/pt/LC_MESSAGES/gnome-twitch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/ru/LC_MESSAGES/gnome-twitch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/gnome-twitch.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/gnome-twitch.mo</Path>
         </Files>
     </Package>
     <Package>
@@ -49,19 +59,20 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="14">gnome-twitch</Dependency>
+            <Dependency release="15">gnome-twitch</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="header">/usr/include/gnome-twitch/gt-log.h</Path>
+            <Path fileType="header">/usr/include/gnome-twitch/gt-player-backend.h</Path>
         </Files>
     </Package>
     <History>
-        <Update release="14">
-            <Date>2018-05-19</Date>
+        <Update release="15">
+            <Date>2019-04-20</Date>
             <Version>0.4.2</Version>
             <Comment>Packaging update</Comment>
-            <Name>Simon Friend</Name>
-            <Email>simbiotiqu@gmail.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Update>
     </History>
 </PISI>

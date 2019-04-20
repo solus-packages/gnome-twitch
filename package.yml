@@ -1,6 +1,6 @@
 name       : gnome-twitch
 version    : 0.4.2
-release    : 14
+release    : 15
 source     :
     - https://github.com/vinszent/gnome-twitch/archive/v0.4.2.tar.gz : 82c37c858f69c39b7cd38d20c91d8ec2441d339a6d2eaf1f1cc9f0503c52b661
 license    : GPL-3.0-or-later
